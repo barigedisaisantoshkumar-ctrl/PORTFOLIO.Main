@@ -38,7 +38,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition"
               >
-                <Github size={20} />
+                <Github />
               </a>
               <a
                 href="https://linkedin.com"
@@ -46,7 +46,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition"
               >
-                <Linkedin size={20} />
+                <Linkedin />
               </a>
               <a
                 href="mailto:contact@example.com"
