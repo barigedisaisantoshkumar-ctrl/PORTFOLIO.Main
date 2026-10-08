@@ -3,23 +3,55 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
+import { Wrench, Database, Network, Server, FileText, Code2 } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Frontend Development",
-    skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion"],
+    title: "Application & Technical Support",
+    icon: <Wrench className="text-blue-400" size={20} />,
+    skills: [
+      "Issue Diagnosis",
+      "Troubleshooting",
+      "Production Support",
+      "Incident Reporting",
+      "Root-Cause Analysis",
+      "User & Stakeholder Coordination",
+    ],
   },
   {
-    title: "Backend & APIs",
-    skills: ["Python", "Node.js", "Express", "REST APIs", "OpenAPI", "MongoDB"],
+    title: "Databases & Backend",
+    icon: <Database className="text-emerald-400" size={20} />,
+    skills: [
+      "SQL Queries",
+      "Data Validation",
+      "PostgreSQL",
+      "SQLite",
+      "Supabase",
+      "REST APIs",
+    ],
   },
   {
-    title: "AI & Security",
-    skills: ["NLP", "Hybrid Recommendation Systems", "API Security Testing", "Cyber Security Fundamentals", "Machine Learning"],
+    title: "Networking & Security",
+    icon: <Network className="text-purple-400" size={20} />,
+    skills: [
+      "TCP/IP",
+      "Routing & Switching",
+      "Network Troubleshooting (CCNA)",
+      "API Security Testing",
+      "Cyber Security Fundamentals",
+    ],
   },
   {
-    title: "Tools & Workflows",
-    skills: ["Git", "GitHub", "Vercel", "CI/CD Workflows", "Jest", "Postman", "Figma"],
+    title: "Scripting, Tools & ITSM",
+    icon: <Server className="text-pink-400" size={20} />,
+    skills: [
+      "Python",
+      "JavaScript",
+      "ServiceNow (CSA & CSD)",
+      "Git / GitHub",
+      "CI/CD Workflows",
+      "Bug & Incident Tracking",
+    ],
   },
 ];
 
@@ -41,9 +73,12 @@ export default function Skills() {
             Technical <span className="text-gradient">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+            Core competencies spanning enterprise application support, database engineering, network protocols, and ITSM workflows.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {skillCategories.map((category, i) => (
             <motion.div
               key={i}
@@ -54,15 +89,20 @@ export default function Skills() {
             >
               <Card className="glass bg-black/5 dark:bg-white/5 border-border hover:border-primary/50 transition-colors h-full">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-6">
-                    {category.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 rounded-lg glass bg-black/5 dark:bg-white/5">
+                      {category.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2.5">
                     {category.skills.map((skill, j) => (
                       <Badge 
                         key={j} 
                         variant="glass" 
-                        className="px-4 py-2 text-sm text-foreground hover:bg-black/10 dark:hover:bg-white/10 transition-colors border-border"
+                        className="px-3.5 py-1.5 text-xs md:text-sm text-foreground hover:bg-black/10 dark:hover:bg-white/10 transition-colors border-border font-normal"
                       >
                         {skill}
                       </Badge>
@@ -77,3 +117,4 @@ export default function Skills() {
     </section>
   );
 }
+

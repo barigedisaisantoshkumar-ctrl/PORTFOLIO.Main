@@ -62,7 +62,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              Computer Science Engineering student passionate about building scalable web applications, AI-powered systems, and modern digital experiences.
+              Software Engineer specializing in Cyber Security & Full-Stack Development. Experienced in building robust web applications, automated security testing agents, and scalable cloud architectures.
             </motion.p>
 
             <motion.div

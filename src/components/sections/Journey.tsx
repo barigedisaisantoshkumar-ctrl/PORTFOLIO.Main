@@ -1,40 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, School, BookOpen } from "lucide-react";
+import { GraduationCap, Briefcase, School, BookOpen, Code2, CheckCircle2 } from "lucide-react";
 
 const timelineData = [
   {
-    title: "Narayana Olympiad School",
-    subtitle: "6th to 10th Grade",
-    date: "June 2016 – Feb 2020",
-    description: "Built strong academic foundations and analytical skills during the foundational schooling years.",
-    icon: <School size={20} className="text-blue-400" />,
-    color: "from-blue-500",
+    title: "Web Development & Testing Specialist",
+    company: "Netmaxin Group (Remote)",
+    date: "Aug 2024 – Mar 2026",
+    type: "Experience",
+    highlights: [
+      "Diagnosed and troubleshot application issues, debugged defects, and verified fixes to support production stability and reliable releases.",
+      "Logged and tracked bugs in a structured, ticket-style format with clear steps and results for team visibility and traceability.",
+      "Performed functional and workflow testing to validate application features and UI/UX behavior across modules.",
+      "Coordinated with design, development, and QA teams to resolve issues on time; also developed and maintained web applications.",
+    ],
+    icon: <Briefcase size={20} className="text-emerald-400" />,
+    color: "from-emerald-500",
   },
   {
-    title: "Narayana Junior College",
-    subtitle: "Intermediate (MPC)",
-    date: "Apr 2020 – Mar 2022",
-    description: "Specialized in Mathematics, Physics, and Chemistry, laying the groundwork for engineering.",
-    icon: <BookOpen size={20} className="text-purple-400" />,
-    color: "from-purple-500",
+    title: "SDE Intern",
+    company: "HPS",
+    date: "3 Months",
+    type: "Internship",
+    highlights: [
+      "Contributed to feature development and debugging across application modules as part of a software development team.",
+      "Investigated and resolved reported issues using structured troubleshooting and root-cause analysis to restore expected behavior.",
+      "Used Git/GitHub for version control; collaborated to test, review, and document changes before release.",
+    ],
+    icon: <Code2 size={20} className="text-cyan-400" />,
+    color: "from-cyan-500",
   },
   {
-    title: "MVGR College of Engineering",
-    subtitle: "B.Tech in CSE - Cyber Security",
-    date: "Sep 2023 – Present",
-    description: "Deep-diving into computer science principles, with a specialized focus on network security, cryptography, and secure application development.",
+    title: "B.Tech, CSE (Cyber Security)",
+    company: "MVGR College of Engineering, Vizianagaram",
+    date: "2023 – Present",
+    type: "Education",
+    description: "Specializing in Cyber Security with hands-on coursework in network security, operating systems, database management, and secure software engineering. CGPA: 6.92 / 10.0.",
     icon: <GraduationCap size={20} className="text-pink-400" />,
     color: "from-pink-500",
   },
   {
-    title: "Freelance Journey – NetMaxin Group",
-    subtitle: "Software Engineering Freelancer",
-    date: "Oct 2024 – Oct 2025",
-    description: "Focused on UI enhancements, bug fixing, AI tools testing, and comprehensive integration testing to ensure robust and seamless application experiences.",
-    icon: <Briefcase size={20} className="text-emerald-400" />,
-    color: "from-emerald-500",
+    title: "Intermediate (MPC)",
+    company: "Narayana Junior College",
+    date: "Apr 2020 – Mar 2022",
+    type: "Education",
+    description: "Rigorous focus on Mathematics, Physics, and Chemistry, laying solid analytical and mathematical problem-solving fundamentals.",
+    icon: <BookOpen size={20} className="text-purple-400" />,
+    color: "from-purple-500",
+  },
+  {
+    title: "Secondary Schooling",
+    company: "Narayana Olympiad School",
+    date: "June 2016 – Feb 2020",
+    type: "Education",
+    description: "Built strong academic foundations and logical thinking throughout standard 6th to 10th grade schooling.",
+    icon: <School size={20} className="text-blue-400" />,
+    color: "from-blue-500",
   },
 ];
 
@@ -53,9 +75,12 @@ export default function Journey() {
           className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            My <span className="text-gradient">Journey</span>
+            Professional <span className="text-gradient">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+            Track record of hands-on software engineering, application troubleshooting, and academic milestones.
+          </p>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
@@ -68,7 +93,7 @@ export default function Journey() {
             className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-primary md:-translate-x-1/2 rounded-full opacity-30"
           ></motion.div>
 
-          <div className="space-y-12 md:space-y-24">
+          <div className="space-y-12 md:space-y-20">
             {timelineData.map((item, i) => (
               <motion.div
                 key={i}
@@ -91,30 +116,35 @@ export default function Journey() {
 
                 {/* Content Card */}
                 <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${i % 2 === 0 ? "md:pl-16" : "md:pr-16"}`}>
-                  <div className="glass p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 relative group overflow-hidden bg-black/5 dark:bg-black/20 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] hover:-translate-y-1">
+                  <div className="glass p-7 md:p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 relative group overflow-hidden bg-black/5 dark:bg-black/20 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] hover:-translate-y-1">
                     {/* Hover Gradient Sweep */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${item.color} to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                     
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+                      <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
-                      <span className="text-xs font-bold tracking-wider text-muted-foreground bg-black/5 dark:bg-white/5 px-3 py-1 rounded-full whitespace-nowrap border border-border inline-block w-fit">
+                      <span className="text-xs font-semibold tracking-wider text-muted-foreground bg-black/5 dark:bg-white/5 px-3 py-1 rounded-full whitespace-nowrap border border-border inline-block w-fit">
                         {item.date}
                       </span>
                     </div>
                     
-                    <h4 className="text-primary font-medium mb-3 flex items-center gap-2">
+                    <h4 className="text-primary font-medium text-sm md:text-base mb-4 flex items-center gap-2">
                       <span className="md:hidden">{item.icon}</span>
-                      {item.subtitle}
+                      {item.company}
                     </h4>
                     
-                    {item.title.includes("Freelance") ? (
-                      <ul className="text-muted-foreground text-sm md:text-base leading-relaxed space-y-2 list-disc list-inside marker:text-primary/50">
-                        <li>UI & Bug Fixing</li>
-                        <li>AI Tools Testing</li>
-                        <li>Integration Testing</li>
-                      </ul>
+                    {item.highlights ? (
+                      <div className="space-y-2">
+                        {item.highlights.map((highlight, idx) => (
+                          <div key={idx} className="flex items-start gap-2">
+                            <CheckCircle2 size={16} className="text-primary/70 shrink-0 mt-0.5" />
+                            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+                              {highlight}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     ) : (
                       <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                         {item.description}
@@ -130,3 +160,4 @@ export default function Journey() {
     </section>
   );
 }
+

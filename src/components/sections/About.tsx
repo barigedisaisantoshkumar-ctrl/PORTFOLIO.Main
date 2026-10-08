@@ -38,26 +38,26 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold text-foreground mb-6">
-              Engineering the Future
+              Engineering Secure & Reliable Systems
             </h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I am a dedicated Computer Science Engineering student with a strong specialization in Cyber Security. My journey in tech is driven by a passion for creating not just functional, but exceptional digital experiences.
+                I am a Computer Science Engineering student specializing in Cyber Security with hands-on experience in application support, troubleshooting, and production issue diagnosis gained through web development roles and software engineering internships.
               </p>
               <p>
-                With hands-on experience in full-stack web development, integrating AI-powered features, and rigorous software testing, I build solutions that are scalable, secure, and user-centric.
+                Skilled in SQL-based data validation, root-cause analysis, structured bug/incident documentation, and Git/GitHub workflows, paired with solid networking fundamentals (TCP/IP, routing, switching) and ServiceNow ITSM platform expertise.
               </p>
               <p>
-                Whether it's developing an autonomous API security testing tool or crafting a visually stunning frontend, I approach every project with a problem-solving mindset and a commitment to excellence.
+                Whether building automated API security agents, developing full-stack certificate verification platforms, or diagnosing production defects, I focus on engineering reliable, robust, and scalable solutions.
               </p>
             </div>
 
             <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                "B.Tech in Computer Science",
-                "Cyber Security Specialist",
-                "Full-Stack Developer",
-                "AI Enthusiast"
+                "B.Tech CSE (Cyber Security)",
+                "CCNA & Networking Fundamentals",
+                "ServiceNow Certified (CSA & CSD)",
+                "Full-Stack Web & API Testing"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-muted-foreground">
                   <CheckCircle2 size={18} className="text-primary" />

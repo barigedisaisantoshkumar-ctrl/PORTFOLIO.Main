@@ -33,7 +33,7 @@ export default function Footer() {
             <h4 className="text-foreground font-semibold">Connect</h4>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/barigedisaisantoshkumar-ctrl"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition"
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Github />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/santosh-barigedi"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition"
@@ -49,7 +49,7 @@ export default function Footer() {
                 <Linkedin />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:barigedisaisantoshkumar@gmail.com"
                 className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition"
               >
                 <Mail size={20} />
